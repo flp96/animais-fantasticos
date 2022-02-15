@@ -5,9 +5,8 @@ export default class Modal {
     this.containerModal = document.querySelector(containerModal);
 
     // bind this ao callback para
-    // fazer referência  ao objeto
+    // fazer referência ao objeto
     // da classe
-
     this.eventToggleModal = this.eventToggleModal.bind(this);
     this.cliqueForaModal = this.cliqueForaModal.bind(this);
   }
