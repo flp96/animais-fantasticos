@@ -24,6 +24,6 @@ function createAnimal(animal) {
   div.innerHTML = `<h3>${animal.especie}</h3><span data-numero>${animal.total}</span>`;
   return div;
 }
-fetchAnimais('./animaisapi.json');
+  fetchAnimais('./animaisapi.json');;
 }
 
