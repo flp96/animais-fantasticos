@@ -5,7 +5,7 @@ export default function initTooltip() {
     item.addEventListener('mouseover', onMouseOver);
   })
 
-  function onMouseOver(event) { 
+  function onMouseOver() { 
     console.log(this);
     const tooltipBox = criarTooltipBox(this);
 
