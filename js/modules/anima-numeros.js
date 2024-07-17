@@ -3,6 +3,8 @@ export default class AnimaNumeros {
     this.numeros = document.querySelectorAll(numeros);
     this.observerTarget = document.querySelector(observerTarget);
     this.observerClass = observerClass;
+
+    // bind o this do objeto ao callback da mutação
     this.handleMutation = this.handleMutation.bind(this);
   }
 
