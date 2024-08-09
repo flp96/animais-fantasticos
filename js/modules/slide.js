@@ -47,8 +47,8 @@ export class Slide {
     const movetype = (event.type === 'mouseup') ? 'mousemove' : 'touchmove';
     this.wrapper.removeEventListener(movetype, this.onMove);
     this.dist.finalPosition = this.dist.movePosition;
-    this.transition(true);
     this.changeSlideOnEnd();
+    this.transition(true);
   }
 
   changeSlideOnEnd() {
@@ -128,10 +128,8 @@ export class Slide {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
-
     this.activePrevSlide = this.activePrevSlide.bind(this);
     this.activeNextSlide = this.activeNextSlide.bind(this);
-
     this.onResize = debounce(this.onResize.bind(this), 200);
   }
 
@@ -167,7 +165,7 @@ export default class SlideNav extends Slide {
       const control = document.createElement('ul');
       control.dataset.control = 'slide';
       this.slideArray.forEach((item, index) => {
-        control.innerHTML += `<li><a href="#slide${index + 1}">${index}</a></li>`
+        control.innerHTML += `<li><a href="#slide${index + 1}">${index + 1}</a></li>`;
       });
       this.wrapper.appendChild(control);
       return control;
